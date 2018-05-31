@@ -7,9 +7,9 @@
 		<!-- 引入 echarts.js -->
 		<!-- 这里是加载刚下好的echarts.min.js，注意路径 -->
 		<link rel="stylesheet" type="text/css" href="style/style.css" >
-		<script src="bootstrap.min.js"></script>
-<link rel="stylesheet" href="bootstrap.min.css" />
-<link rel="stylesheet" href="bootstrap-responsive.min.css" />
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="js/bootstrap.min.css" />
+		<link rel="stylesheet" href="bootstrap-responsive.min.css" />
 		<script src="echarts.js"></script>
 		<script src="js/customed.js"></script>
 		<script src="func.js"></script>
@@ -2077,122 +2077,170 @@
 		<!-- Swiper -->
 		<!--<div class="swiper-no-swiping"></div>-->
 
-		<div class="row">
-
-			<div class="col-md-6">
-				<td>&nbsp所属学科:</td>
-				<td>
-					<select onchange="select_sub_change(this.value)">
-						<option value="1">人文</option>
-						<option value="2" selected="selected">理工</option>
-					</select>
-				</td>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<td>&nbsp所属学科:</td>
+					<td>
+						<select onchange="select_sub_change(this.value)">
+							<option value="1">人文</option>
+							<option value="2" selected="selected">理工</option>
+						</select>
+					</td>
+				</div>
+				<div class="col-md-3"></div>
 			</div>
 
-			<div class="col-md-6">
-				<td>&nbsp当前年龄:</td>
-				<td><input ime-mode:disabled onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="age"></td>
-				<!-- <td><input type="text" id="age"></td> -->
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<td>&nbsp当前年龄:</td>
+					<td><input ime-mode:disabled onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="age"></td>
+					<!-- <td><input type="text" id="age"></td> -->
+				</div>
+				<div class="col-md-3"></div>
 			</div>
 
-			<div class="col-md-6">
-				<td>&nbsp最高学历:</td>
-				<td>
-					<select onchange="select_edu_change(this.value)">
-						<option value="0" selected="selected"></option>
-						<option value="1">其他</option>
-						<option value="2">本科</option>
-						<option value="3">硕士</option>
-						<option value="4">博士及以上</option>
-					</select>
-				</td>
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<td>&nbsp最高学历:</td>
+					<td>
+						<select onchange="select_edu_change(this.value)">
+							<option value="0" selected="selected"></option>
+							<option value="1">其他</option>
+							<option value="2">本科</option>
+							<option value="3">硕士</option>
+							<option value="4">博士及以上</option>
+						</select>
+					</td>
+				</div>
+				<div class="col-md-3"></div>
 			</div>
 
-			<div class="col-md-6">
-				<td>&nbsp目前职称:</td>
-				<td>
-					<select onchange="select_job_change(this.value)">
-						<option value="0" selected="selected"></option>
-						<option value="1">其他</option>
-						<option value="2">国内副教授</option>
-						<option value="3">国外助理教授</option>
-						<option value="4">国内教授</option>
-						<option value="4">国外副教授及以上</option>
-					</select>
-				</td>
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<td>&nbsp目前职称:</td>
+					<td>
+						<select onchange="select_job_change(this.value)">
+							<option value="0" selected="selected"></option>
+							<option value="1">其他</option>
+							<option value="2">国内副教授</option>
+							<option value="3">国外助理教授</option>
+							<option value="4">国内教授</option>
+							<option value="4">国外副教授及以上</option>
+						</select>
+					</td>
+				</div>
+				<div class="col-md-3"></div>
 			</div>
 
-			<div class="col-md-6">
-				<td>&nbsp已获得奖项:</td>
-				<td>
-					<select onchange="select_awd_change(this.value)">
-						<option value="0" selected="selected"></option>
-						<option value="1">无</option>
-						<option value="2">省部级科技发明等奖项</option>
-						<option value="3">国家级科技发明等奖项</option>
-					</select>
-				</td>
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<td>&nbsp已获得奖项:</td>
+					<td>
+						<select onchange="select_awd_change(this.value)">
+							<option value="0" selected="selected"></option>
+							<option value="1">无</option>
+							<option value="2">省部级科技发明等奖项</option>
+							<option value="3">国家级科技发明等奖项</option>
+						</select>
+					</td>
+				</div>
+				<div class="col-md-3"></div>
 			</div>
 
-			<div class="col-md-6">
-				<td>&nbsp已参与科研:</td>
-				<td>
-					<select onchange="select_rhs_change(this.value)">
-						<option value="0" selected="selected"></option>
-						<option value="1">无</option>
-						<option value="2">参与或主持其他级别项目</option>
-						<option value="3">参与或主持省部级项目</option>
-						<option value="4">参与或主持国家级项目</option>
-						<option value="5">参与或主持国家重大专项</option>
-					</select>
-				</td>
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<td>&nbsp已参与科研:</td>
+					<td>
+						<select onchange="select_rhs_change(this.value)">
+							<option value="0" selected="selected"></option>
+							<option value="1">无</option>
+							<option value="2">参与或主持其他级别项目</option>
+							<option value="3">参与或主持省部级项目</option>
+							<option value="4">参与或主持国家级项目</option>
+							<option value="5">参与或主持国家重大专项</option>
+						</select>
+					</td>
+				</div>
+				<div class="col-md-3"></div>
 			</div>
 
-			<div class="col-md-6">
-				<td>&nbsp倾向地域:</td>
-				<td>
-					<tr><input type="checkbox" name="check" value="3" />东部</tr>
-					<tr><input type="checkbox" name="check" value="2" />西部</tr>
-					<tr><input type="checkbox" name="check" value="1" />中部</tr>
-				</td>
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<td>&nbsp倾向地域:</td>
+					<td>
+						<tr><input type="checkbox" name="check" value="3" />东部</tr>
+						<tr><input type="checkbox" name="check" value="2" />西部</tr>
+						<tr><input type="checkbox" name="check" value="1" />中部</tr>
+					</td>
+				</div>
+				<div class="col-md-3"></div>
 			</div>
 
-			<div class="col-md-6">
-				<td>&nbsp住房补助:</td>
-				<td>
-					<select onchange="select_hss_change(this.value)">
-						<option value="0" selected="selected">否</option>
-						<option value="1">是</option>
-					</select>
-				</td>
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<td>&nbsp住房补助:</td>
+					<td>
+						<select onchange="select_hss_change(this.value)">
+							<option value="0" selected="selected">否</option>
+							<option value="1">是</option>
+						</select>
+					</td>
+				</div>
+				<div class="col-md-3"></div>
 			</div>
 
-			<div class="col-md-6">
-				<td>&nbsp家属优惠政策:</td>
-				<td>
-					<select onchange="select_fmp_change(this.value)">
-						<option value="0" selected="selected">否</option>
-						<option value="1">是</option>
-					</select>
-				</td>
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<td>&nbsp家属优惠政策:</td>
+					<td>
+						<select onchange="select_fmp_change(this.value)">
+							<option value="0" selected="selected">否</option>
+							<option value="1">是</option>
+						</select>
+					</td>
+				</div>
+				<div class="col-md-3"></div>
 			</div>
 
-			<div class="col-md-6">
-				<td>&nbsp预期科研补助（万/年）:</td>
-				<td><input ime-mode:disabled onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="rsg"></td>
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<td>&nbsp预期科研补助（万/年）:</td>
+					<td><input ime-mode:disabled onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="rsg"></td>
+				</div>
+				<div class="col-md-3"></div>
 			</div>
 
-			<div class="col-md-6">
-				<td>&nbsp预期津贴（万/年）:</td>
-				<td><input ime-mode:disabled onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="epa"></td>
-
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<td>&nbsp预期津贴（万/年）:</td>
+					<td><input ime-mode:disabled onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="epa"></td>
+				</div>
+				<div class="col-md-3"></div>
 			</div>
 
-			<td><input type="button" value="搜索" onclick="sqlsearch()"></td>
-			<table border="1" id="datatable"></table>
-			<p id="msg"></p>
+			<div class="row">
+				<div class="col-md-3"></div>
+				<td><input type="button" value="搜索" onclick="sqlsearch()"></td>
+				<table border="1" id="datatable"></table>
+				<p id="msg"></p>
+				<div class="col-md-3"></div>
+			</div>
 
 		</div>
+
 </article>
 
 	</body>
