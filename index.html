@@ -30,10 +30,10 @@
 			<script type="text/javascript"></script>
 			<script src="scripts/china.js"></script>
 			<script>
-				var chartScheduleProvinces = echarts.init(document.getElementById('schedule-provinces'));
-optionScheduleProvinces = {
+				var chartScheduleProvinces1 = echarts.init(document.getElementById('schedule-provinces'));
+optionScheduleProvinces1 = {
     title: {
-	text:'各省级行政区“学者”数量分布',
+	text:"各省级行政区“学者”数量分布",
         x: "left"
     },
     tooltip: {
@@ -82,18 +82,6 @@ optionScheduleProvinces = {
             type: "map",
             name: "省份",
 	    map:'china',
-            showLegendSymbol: true,
-            selectedMode: "multiple",
-            hoverable: true,
-            itemStyle: {
-                normal: {
-                    borderColor: "rgb(171, 173, 162)",
-                    label: {
-                        show: false
-                    }
-                }
-            },
-            mapType: "china",
             data: [
                 {
                     value: 6,
@@ -215,11 +203,22 @@ optionScheduleProvinces = {
                     value: 1,
                     name: "海南"
                 }
-            ]
-        }
     ],
-}
-    chartScheduleProvinces.setOption(optionScheduleProvinces);
+showLegendSymbol: true,
+						selectedMode: "multiple",
+						hoverable: true,
+						itemStyle: {
+							normal: {
+								borderColor: "rgb(171, 173, 162)",
+								label: {
+									show: false
+								}
+							}
+						},
+						mapType: "china"
+					}]
+				};
+    chartScheduleProvinces1.setOption(optionScheduleProvinces1);
 			</script>
 
 			<div>
@@ -1358,9 +1357,9 @@ optionScheduleProvinces = {
 			<script type="text/javascript"></script>
 			<script src="scripts/china.js"></script>
 			<script>
-				var chartScheduleProvinces1 = echarts.init(document.getElementById('schedule-provinces'),'customed');
+				var chartScheduleProvinces = echarts.init(document.getElementById('schedule-provinces'),'customed');
 
-				optionScheduleProvinces1 = {
+				optionScheduleProvinces = {
 					title: {
 						text:"各省“学者”计划待遇指数分布",
 						x: "left"
@@ -1534,7 +1533,7 @@ optionScheduleProvinces = {
 						]
 					}],
 				};
-				chartScheduleProvinces1.setOption(optionScheduleProvinces1);
+				chartScheduleProvinces.setOption(optionScheduleProvinces);
 			</script>
 
 			<p>科研经费的高低是吸引科研人才的前往的重要因素。据统计，学者计划中自然理工科的平均科研经费（80万）为人文社科经费（30万）的近3倍。自然理工科对于高精尖实验设备的需求动辄几十上百万，其花费依然不可小觑。省、市、校三级对于同一学科科研经费虽没有明显差异，但省级拨付经费仍略占优势。</p>
