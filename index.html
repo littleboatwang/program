@@ -33,173 +33,192 @@
 				var chartScheduleProvinces1 = echarts.init(document.getElementById('schedule-provinces1'));
 
 				optionScheduleProvinces1 = {
-					title: {
-						text:"各省级行政区“学者”数量分布",
-						x: "left"
-					},
-					tooltip: {
-						trigger: "item",
-						borderWidth: 0,
-						borderColor: "rgb(242, 242, 242)"
-					},
-					dataRange: {
-						min: 0,
-						max: 10,
-						x: "left",
-						y: "bottom",
-						text: ["高", "低"],
-						calculable: true
-						
-					},
-					toolbox: {
-						feature: {
-							mark: {
-								show: true
-							},
-							dataView: {
-								show: true,
-								readOnly: false
-							},
-							restore: {
-								show: true
-							},
-							saveAsImage: {
-								show: true
-							}
-						},
-						show: true,
-						orient: "vertical",
-						y: "bottom",
-						x: "right"
-					},
-					roamController: {
-						mapTypeControl: {
-							china: true
-						},
-						x: "right",
-						handlerColor: "rgb(144, 148, 150)"
-					},
-					series: [{
-						type: "map",
-						name: "省份",
-						map: 'china',
-						data: [{
-								value: 2,
-								name: "安徽"
-							},
-							{
-								value: 3,
-								name: "北京"
-							},
-							{
-								value: 4,
-								name: "福建"
-							},
-							{
-								value: 2,
-								name: "甘肃"
-							},
-							{
-								value: 5,
-								name: "广东"
-							},
-							{
-								value: 3,
-								name: "广西"
-							},
-							{
-								value: 1,
-								name: "河北"
-							},
-							{
-								value: 3,
-								name: "河南"
-							},
-							{
-								value: 1,
-								name: "黑龙江"
-							},
-							{
-								value: 10,
-								name: "湖北"
-							},
-							{
-								value: 6,
-								name: "湖南"
-							},
-							{
-								value: 6,
-								name: "江苏"
-							},
-							{
-								value: 4,
-								name: "江西"
-							},
-							{
-								value: 8,
-								name: "辽宁"
-							},
-							{
-								value: 1,
-								name: "内蒙古"
-							},
-							{
-								value: 1,
-								name: "青海"
-							},
-							{
-								value: 1,
-								name: "宁夏"
-							},
-							{
-								value: 3,
-								name: "山东"
-							},
-							{
-								value: 1,
-								name: "山西"
-							},
-							{
-								value: 8,
-								name: "陕西"
-							},
-							{
-								value: 5,
-								name: "上海"
-							},
-							{
-								value: 3,
-								name: "四川"
-							},
-							{
-								value: 3,
-								name: "天津"
-							},
-							{
-								value: 1,
-								name: "西藏"
-							},
-							{
-								value: 1,
-								name: "香港"
-							},
-							{
-								value: 2,
-								name: "新疆"
-							},
-							{
-								value: 2,
-								name: "云南"
-							},
-							{
-								value: 6,
-								name: "浙江"
-							},
-							{
-								value: 1,
-								name: "重庆"
-							}
-						],
+					{
+    title: {"各省级行政区“学者”数量分布"
+        x: "center",
+        textStyle: {
+            color: "rgb(234, 117, 148)"
+        }
+    },
+    tooltip: {
+        trigger: "item",
+        borderWidth: 0,
+        borderColor: "rgb(242, 242, 242)"
+    },
+    dataRange: {
+        min: 0,
+        max: 12,
+        x: "left",
+        y: "bottom",
+        text: ["高", "低"],
+        calculable: true,
+    },
+    toolbox: {
+        feature: {
+            mark: {
+                show: true
+            },
+            dataView: {
+                show: true,
+                readOnly: false
+            },
+            restore: {
+                show: true
+            },
+            saveAsImage: {
+                show: true
+            }
+        },
+        show: true,
+        orient: "vertical",
+        y: "bottom",
+        x: "right"
+    },
+    roamController: {
+        mapTypeControl: {
+            china: true
+        },
+        x: "right",
+        handlerColor: "rgb(144, 148, 150)"
+    },
+    series: [
+        {
+            type: "map",
+            name: "省份",
+            showLegendSymbol: true,
+            selectedMode: "multiple",
+            hoverable: true,
+            itemStyle: {
+                normal: {
+                    borderColor: "rgb(171, 173, 162)",
+                    label: {
+                        show: false
+                    }
+                }
+            },
+            mapType: "china",
+            data: [
+                {
+                    value: 6,
+                    name: "江苏"
+                },
+                {
+                    value: 7,
+                    name: "广东"
+                },
+                {
+                    value: 8,
+                    name: "辽宁"
+                },
+                {
+                    value: 2,
+                    name: "河北"
+                },
+                {
+                    value: 7,
+                    name: "上海"
+                },
+                {
+                    value: 3,
+                    name: "天津"
+                },
+                {
+                    value: 4,
+                    name: "山东"
+                },
+                {
+                    value: 6,
+                    name: "浙江"
+                },
+                {
+                    value: 2,
+                    name: "安徽"
+                },
+                {
+                    value: 4,
+                    name: "河南"
+                },
+                {
+                    value: 1,
+                    name: "黑龙江"
+                },
+                {
+                    value: 12,
+                    name: "湖北"
+                },
+                {
+                    value: 6,
+                    name: "湖南"
+                },
+                {
+                    value: 1,
+                    name: "内蒙古"
+                },
+                {
+                    value: 6,
+                    name: "江西"
+                },
+                {
+                    value: 1,
+                    name: "山西"
+                },
+                {
+                    value: 2,
+                    name: "甘肃"
+                },
+                {
+                    value: 3,
+                    name: "广西"
+                },
+                {
+                    value: 1,
+                    name: "青海"
+                },
+                {
+                    value: 1,
+                    name: "宁夏"
+                },
+                {
+                    value: 8,
+                    name: "陕西"
+                },
+                {
+                    value: 4,
+                    name: "四川"
+                },
+                {
+                    value: 1,
+                    name: "西藏"
+                },
+                {
+                    value: 2,
+                    name: "新疆"
+                },
+                {
+                    value: 2,
+                    name: "云南"
+                },
+                {
+                    value: 1,
+                    name: "重庆"
+                },
+                {
+                    value: 1,
+                    name: "香港"
+                },
+                {
+                    value: 1,
+                    name: "吉林"
+                },
+                {
+                    value: 1,
+                    name: "贵州"
+                },
+                {
+                    value: 1,
+                    name: "海南"
+                }
+            ],
 						showLegendSymbol: true,
 						selectedMode: "multiple",
 						hoverable: true,
@@ -238,765 +257,710 @@
 				// 基于准备好的dom，初始化echarts实例
 				var myChart = echarts.init(document.getElementById('condition'));
 				var data = [{
-					name: '西部地区',
-					itemStyle: {
-						color: '#008B8B'
-					},
-					children: [{
-						name: '陕西',
-						value: 8,
-						itemStyle: {
-							color: '#87CEFA'
-						},
-						children: [{
-							name: '翱翔学者 1.71',
-							value: 1,
-							itemStyle: {
-								color: '#008080'
-							}
-						}, {
-							name: '雁塔学者 1.87',
-							value: 1,
-							itemStyle: {
-								color: '#008080'
-							}
-						}, {
-							name: '胡杨学者 2.62',
-							value: 1,
-							itemStyle: {
-								color: '#48D1CC'
-							}
-						}, {
-							name: '西外学者 2.62',
-							value: 1,
-							itemStyle: {
-								color: '#48D1CC'
-							}
-						}, {
-							name: '曲江学者 2.80',
-							value: 1,
-							itemStyle: {
-								color: '#48D1CC'
-							}
-						}, {
-							name: '长安学者 2.87',
-							value: 1,
-							itemStyle: {
-								color: '#48D1CC'
-							}
-						}, {
-							name: '华山学者 3.17',
-							value: 1,
-							itemStyle: {
-								color: '#87CEFA'
-							}
-						}, {
-							name: '秦岭学者 4.29',
-							value: 1,
-							itemStyle: {
-								color: '#00FFFF'
-							}
-						}]
-					}, {
-						name: '四川',
-						itemStyle: {
-							color: '#87CEEB'
-						},
-						children: [{
-							name: '雏鹰学者 1.71',
-							value: 1,
-							itemStyle: {
-								color: '#008080'
-							}
-						}, {
-							name: '西华学者 2.07',
-							value: 1,
-							itemStyle: {
-								color: '#20B2AA'
-							}
-						}, {
-							name: '杏林学者 2.87',
-							value: 1,
-							itemStyle: {
-								color: '#48D1CC'
-							}
-						}]
-					}, {
-						name: '新疆',
-						itemStyle: {
-							color: '#00BFFF'
-						},
-						children: [{
-							name: '天山学者 1.21',
-							value: 1,
-							itemStyle: {
-								color: '#008B8B'
-							}
-						}, {
-							name: '绿洲学者 3.02',
-							value: 1,
-							itemStyle: {
-								color: '#87CEFA'
-							}
-						}]
-					}, {
-						name: '青海',
-						itemStyle: {
-							color: '#ADD8E6'
-						},
-						children: [{
-							name: '昆仑学者 2.90',
-							value: 1,
-							itemStyle: {
-								color: '#48D1CC'
-							}
-						}]
-					}, {
-						name: '西藏',
-						itemStyle: {
-							color: '#B0E0E6'
-						},
-						children: [{
-							name: '珠峰学者 2.36',
-							value: 1,
-							itemStyle: {
-								color: '#20B2AA'
-							}
-						}]
-					}, {
-						name: '云南',
-						itemStyle: {
-							color: '#5F9EA0'
-						},
-						children: [{
-							name: '东陆学者 4.29',
-							value: 1,
-							itemStyle: {
-								color: '#00FFFF'
-							}
-						}, {
-							name: '云岭学者 1.21',
-							value: 1,
-							itemStyle: {
-								color: '#008B8B'
-							}
-						}]
-					}, {
-						name: '重庆',
-						itemStyle: {
-							color: '#AFEEEE'
-						},
-						children: [{
-							name: '两江学者 4.29',
-							value: 1,
-							itemStyle: {
-								color: '#00FFFF'
-							}
-						}]
-					}, {
-						name: '甘肃',
-						itemStyle: {
-							color: '#00FFFF'
-						},
-						children: [{
-							name: '飞天学者 2.27',
-							value: 1,
-							itemStyle: {
-								color: '#20B2AA'
-							}
-						}, {
-							name: '萃英学者 2.70',
-							value: 1,
-							itemStyle: {
-								color: '#48D1CC'
-							}
-						}]
-					}, {
-						name: '宁夏',
-						itemStyle: {
-							color: '#4169E1'
-						},
-						children: [{
-							name: '贺兰山学者 2.17',
-							value: 1,
-							itemStyle: {
-								color: '#20B2AA'
-							}
-						}]
-					}]
-				}, {
-					name: '中部地区',
-					itemStyle: {
-						color: '#D9B3E6'
-					},
-					children: [{
-						name: '河南',
-						itemStyle: {
-							color: '#FFC0CB'
-						},
-						children: [{
-							name: '中原学者 2.16',
-							value: 1,
-							itemStyle: {
-								color: '#FF1493'
-							}
-						}, {
-							name: '黄河学者 3.40',
-							value: 1,
-							itemStyle: {
-								color: '#DB7093'
-							}
-						}, {
-							name: '嵩山学者 4.49',
-							value: 1,
-							itemStyle: {
-								color: '#FFC0CB'
-							}
-						}]
-					}, {
-						name: '黑龙江',
-						itemStyle: {
-							color: '#DDA0DD'
-						},
-						children: [{
-							name: '龙江学者 2.90',
-							value: 1,
-							itemStyle: {
-								color: '#EE82EE'
-							}
-						}]
-					}, {
-						name: '湖北',
-						itemStyle: {
-							color: '#FF69B4'
-						},
-						children: [{
-							name: '桂子山学者 1.21',
-							value: 1,
-							itemStyle: {
-								color: '#C71585'
-							}
-						}, {
-							name: '华中学者 1.21',
-							value: 1,
-							itemStyle: {
-								color: '#C71585'
-							}
-						}, {
-							name: '珞珈学者 2.11',
-							value: 1,
-							itemStyle: {
-								color: '#FF1493'
-							}
-						}, {
-							name: '工大学者 2.27',
-							value: 1,
-							itemStyle: {
-								color: '#FF1493'
-							}
-						}, {
-							name: '文澜学者 2.34',
-							value: 1,
-							itemStyle: {
-								color: '#FF1493'
-							}
-						}, {
-							name: '磁湖学者 2.47',
-							value: 1,
-							itemStyle: {
-								color: '#FF1493'
-							}
-						}, {
-							name: '楚天学者 2.82',
-							value: 1,
-							itemStyle: {
-								color: '#EE82EE'
-							}
-						}, {
-							name: '地大学者 3.50',
-							value: 1,
-							itemStyle: {
-								color: '#DB7093'
-							}
-						}, {
-							name: '阳光学者 3.56',
-							value: 1,
-							itemStyle: {
-								color: '#FF69B4'
-							}
-						}, {
-							name: '香涛学者 4.29',
-							value: 1,
-							itemStyle: {
-								color: '#FFC0CB'
-							}
-						}]
-					}, {
-						name: '内蒙古',
-						itemStyle: {
-							color: '#DB7093'
-						},
-						children: [{
-							name: '阴山学者 2.47',
-							value: 1,
-							itemStyle: {
-								color: '#FF1493'
-							}
-						}]
-					}, {
-						name: '湖南',
-						itemStyle: {
-							color: '#DB7093'
-						},
-						children: [{
-							name: '芙蓉学者 2.17',
-							value: 1,
-							itemStyle: {
-								color: '#FF1493'
-							}
-						}, {
-							name: '岳麓山学者 2.67',
-							value: 1,
-							itemStyle: {
-								color: '#EE82EE'
-							}
-						}, {
-							name: '潇湘学者 2.70',
-							value: 1,
-							itemStyle: {
-								color: '#EE82EE'
-							}
-						}, {
-							name: '树人学者 3.07',
-							value: 1,
-							itemStyle: {
-								color: '#DB7093'
-							}
-						}, {
-							name: '神农学者 3.14',
-							value: 1,
-							itemStyle: {
-								color: '#DB7093'
-							}
-						}, {
-							name: '湘江学者 4.19',
-							value: 1,
-							itemStyle: {
-								color: '#FFC0CB'
-							}
-						}]
-					}, {
-						name: '江西',
-						itemStyle: {
-							color: '#EE82EE'
-						},
-						children: [{
-							name: '瑶湖学者 1.41',
-							value: 1,
-							itemStyle: {
-								color: '#C71585'
-							}
-						}, {
-							name: '天佑学者 2.56',
-							value: 1,
-							itemStyle: {
-								color: '#FF1493'
-							}
-						}, {
-							name: '梅岭学者 2.80',
-							value: 1,
-							itemStyle: {
-								color: '#FF1493'
-							}
-						}]
-					}, {
-						name: '山西',
-						itemStyle: {
-							color: '#DDA0DD'
-						},
-						children: [{
-							name: '2.67 三晋学者',
-							value: 1,
-							itemStyle: {
-								color: '#FF1493'
-							}
-						}]
-					}, {
-						name: '安徽',
-						itemStyle: {
-							color: '#FFC0CB'
-						},
-						children: [{
-							name: '2.91 皖江学者',
-							value: 1,
-							itemStyle: {
-								color: '#FF1493'
-							}
-						}, {
-							name: '4.49 黄山学者',
-							value: 1,
-							itemStyle: {
-								color: '#FFC0CB'
-							}
-						}]
-					}]
-				}, {
-					name: '东部地区',
-					itemStyle: {
-						color: '#DCF7A1'
-					},
-					children: [{
-						name: '北京',
-						itemStyle: {
-							color: '#66CDAA'
-						},
-						children: [{
-							name: ' 1.21 白杨学者',
-							value: 1,
-							itemStyle: {
-								color: '#2E8B57'
-							}
-						}, {
-							name: ' 2.06 北京学者',
-							value: 1,
-							itemStyle: {
-								color: '#32CD32'
-							}
-						}, {
-							name: ' 3.12 长城学者',
-							value: 1,
-							itemStyle: {
-								color: '#00FF00'
-							}
-						}]
-					}, {
-						name: '福建',
-						itemStyle: {
-							color: '#00FA9A'
-						},
-						children: [{
-							name: ' 2.82 桐江学者',
-							value: 1,
-							itemStyle: {
-								color: '#7FFF00'
-							}
-						}, {
-							name: ' 3.02 闽江学者',
-							value: 1,
-							itemStyle: {
-								color: '#00FF00'
-							}
-						}, {
-							name: ' 3.97 旗山学者',
-							value: 1,
-							itemStyle: {
-								color: '#00FF7F'
-							}
-						}, {
-							name: ' 4.49 金山学者',
-							value: 1,
-							itemStyle: {
-								color: '#98FB98'
-							}
-						}]
-					}, {
-						name: '广东',
-						itemStyle: {
-							color: '#00FF7F'
-						},
-						children: [{
-							name: ' 1.83 兴华学者',
-							value: 1,
-							itemStyle: {
-								color: '#3CB371'
-							}
-						}, {
-							name: ' 2.16 南岭学者',
-							value: 1,
-							itemStyle: {
-								color: '#32CD32'
-							}
-						}, {
-							name: ' 2.43 鹏城学者',
-							value: 1,
-							itemStyle: {
-								color: '#32CD32'
-							}
-						}, {
-							name: ' 2.67 荔园学者',
-							value: 1,
-							itemStyle: {
-								color: '#7FFF00'
-							}
-						}, {
-							name: ' 2.80 珠江学者',
-							value: 1,
-							itemStyle: {
-								color: '#7FFF00'
-							}
-						}]
-					}, {
-						name: '江苏',
-						itemStyle: {
-							color: '#3CB371'
-						},
-						children: [{
-							name: ' 1.02 越崎学者',
-							value: 1,
-							itemStyle: {
-								color: '#2E8B57'
-							}
-						}, {
-							name: ' 1.71 长空学者',
-							value: 1,
-							itemStyle: {
-								color: '#3CB371'
-							}
-						}, {
-							name: ' 2.07 紫金学者',
-							value: 1,
-							itemStyle: {
-								color: '#32CD32'
-							}
-						}, {
-							name: ' 2.67 钟山学者',
-							value: 1,
-							itemStyle: {
-								color: '#7FFF00'
-							}
-						}, {
-							name: ' 2.87 东吴学者',
-							value: 1,
-							itemStyle: {
-								color: '#7FFF00'
-							}
-						}, {
-							name: ' 3.02 太湖学者',
-							value: 1,
-							itemStyle: {
-								color: '#00FF00'
-							}
-						}]
-					}, {
-						name: '广西',
-						itemStyle: {
-							color: '#2E8B57'
-						},
-						children: [{
-							name: '漓江学者 1.81',
-							value: 1,
-							itemStyle: {
-								color: '#3CB371'
-							}
-						}, {
-							name: '八桂学者 3.07',
-							value: 1,
-							itemStyle: {
-								color: '#00FF00'
-							}
-						}, {
-							name: '卓越学者 3.66',
-							value: 1,
-							itemStyle: {
-								color: '#00FF7F'
-							}
-						}]
-					}, {
-						name: '河北',
-						itemStyle: {
-							color: '#00FF7F'
-						},
-						children: [{
-							name: ' 1.41 元光学者',
-							value: 1,
-							itemStyle: {
-								color: '#2E8B57'
-							}
-						}]
-					}, {
-						name: '辽宁',
-						itemStyle: {
-							color: '#98FB98'
-						},
-						children: [{
-							name: ' 1.21 金普学者',
-							value: 1,
-							itemStyle: {
-								color: '#2E8B57'
-							}
-						}, {
-							name: ' 1.61 腾飞学者',
-							value: 1,
-							itemStyle: {
-								color: '#3CB371'
-							}
-						}, {
-							name: ' 2.17 首山学者',
-							value: 1,
-							itemStyle: {
-								color: '#32CD32'
-							}
-						}, {
-							name: ' 3.02 星海学者',
-							value: 1,
-							itemStyle: {
-								color: '#00FF00'
-							}
-						}, {
-							name: ' 3.12 辽河学者',
-							value: 1,
-							itemStyle: {
-								color: '#00FF00'
-							}
-						}, {
-							name: ' 3.28 湛蓝学者',
-							value: 1,
-							itemStyle: {
-								color: '#00FF00'
-							}
-						}, {
-							name: ' 3.37 攀登学者',
-							value: 1,
-							itemStyle: {
-								color: '#00FF00'
-							}
-						}, {
-							name: ' 3.91 天柱山学者',
-							value: 1,
-							itemStyle: {
-								color: '#00FF7F'
-							}
-						}]
-					}, {
-						name: '山东',
-						itemStyle: {
-							color: '#32CD32'
-						},
-						children: [{
-							name: ' 3.17 齐鲁学者',
-							value: 1,
-							itemStyle: {
-								color: '#00FF00'
-							}
-						}, {
-							name: ' 3.24 鸢都学者',
-							value: 1,
-							itemStyle: {
-								color: '#00FF00'
-							}
-						}, {
-							name: ' 4.29 泰山学者',
-							value: 1,
-							itemStyle: {
-								color: '#98FB98'
-							}
-						}]
-					}, {
-						name: '上海',
-						itemStyle: {
-							color: '#00FF00'
-						},
-						children: [{
-							name: ' 2.16 浦江学者',
-							value: 1,
-							itemStyle: {
-								color: '#32CD32'
-							}
-						}, {
-							name: ' 2.67 晨辉学者',
-							value: 1,
-							itemStyle: {
-								color: '#7FFF00'
-							}
-						}, {
-							name: ' 2.87 海洋学者',
-							value: 1,
-							itemStyle: {
-								color: '#7FFF00'
-							}
-						}, {
-							name: ' 3.10 东方学者',
-							value: 1,
-							itemStyle: {
-								color: '#00FF00'
-							}
-						}, {
-							name: ' 3.96 沪江学者',
-							value: 1,
-							itemStyle: {
-								color: '#00FF7F'
-							}
-						}]
-					}, {
-						name: '浙江',
-						itemStyle: {
-							color: '#7FFF00'
-						},
-						children: [{
-							name: '2.27 钱江学者',
-							value: 1,
-							itemStyle: {
-								color: '#32CD32'
-							}
-						}, {
-							name: ' 2.37 瓯江学者',
-							value: 1,
-							itemStyle: {
-								color: '#32CD32'
-							}
-						}, {
-							name: ' 2.70 求是特聘学者',
-							value: 1,
-							itemStyle: {
-								color: '#7FFF00'
-							}
-						}, {
-							name: ' 3.02 西湖学者',
-							value: 1,
-							itemStyle: {
-								color: '#00FF00'
-							}
-						}, {
-							name: ' 3.50 甬江学者',
-							value: 1,
-							itemStyle: {
-								color: '#00FF00'
-							}
-						}, {
-							name: ' 3.76 鉴湖学者',
-							value: 1,
-							itemStyle: {
-								color: '#00FF7F'
-							}
-						}]
-					}, {
-						name: '天津',
-						itemStyle: {
-							color: '#98FB98'
-						},
-						children: [{
-							name: ' 1.21 北洋学者',
-							value: 1,
-							itemStyle: {
-								color: '#2E8B57'
-							}
-						}, {
-							name: ' 2.77 天工学者',
-							value: 1,
-							itemStyle: {
-								color: '#7FFF00'
-							}
-						}, {
-							name: ' 2.92 海河学者',
-							value: 1,
-							itemStyle: {
-								color: '#7FFF00'
-							}
-						}]
-					}]
-				}];
+    name: '东部地区2.76',
+    itemStyle: {
+        color: '#f0871a'
+    },
+    children: [{
+        name: '河北省1.41',
+        value: 1,
+        itemStyle: {
+            color: '#fad7b2'
+        },
+        children: [{
+            name: '元光学者1.41',
+            value: 1,
+            itemStyle: {
+                color: '#fbd2a7'
+            }
+        }]
+    }, {
+        name: '北京市2.13',
+        itemStyle: {
+            color: '#f7c28b'
+        },
+        children: [{
+            name: '白杨学者1.21',
+            value: 1,
+            itemStyle: {
+                color: '#fdd5ab'
+            }
+        }, {
+            name: '北京学者2.06',
+            value: 1,
+            itemStyle: {
+                color: '#facea1'
+            }
+        }, {
+            name: '长城学者3.12',
+            value: 1,
+            itemStyle: {
+                color: '#f8c795'
+            }
+        }]
+    },{
+        name: '江苏省2.26',
+        itemStyle: {
+            color: '#f5b879'
+        },
+        children: [
+            {
+            name: '越崎学者1.21',
+            value: 1,
+            itemStyle: {color: '#fbd8b4'}
+        },
+        {
+            name: '长空学者1.71',
+            value: 1,
+            itemStyle: {
+                color: '#fbd4ab'
+            }
+        }, {
+            name: '紫金学者2.07',
+            value: 1,
+            itemStyle: {
+                color: '#fcd0a2'
+            }
+        }, {
+            name: '钟山学者2.67',
+            value: 1,
+            itemStyle: {color: '#fac996'}
+        }, {
+            name: '东吴学者2.87',
+            value: 1,
+            itemStyle: {color: '#fbc48c'}
+        }, {
+            name: '太湖学者3.02',
+            value: 1,
+            itemStyle: {color: '#f7be84'}
+        }]
+    },{
+        name: '天津市2.30',
+        value: 1,
+        itemStyle: {
+            color: '#f6b26c'
+        },
+        children: [{
+            name: '北洋学者1.21',
+            value: 1,
+            itemStyle: {
+                color: '#f8c591'
+            }
+        },{
+            name: '天工学者2.77',
+            value: 1,
+            itemStyle: {
+                color: '#f6be85'
+            }
+        },{
+            name: '海河学者2.92',
+            value: 1,
+            itemStyle: {
+                color: '#f6b97b'
+            }
+        }]
+    },{
+        name: '广东省2.38',
+        itemStyle: {
+            color: '#f4a95c'
+        },
+        children: [
+            {
+            name: '兴华学者1.83',
+            value: 1,
+            itemStyle: {color: '#f6c696'}
+        },
+        {
+            name: '南岭学者2.16',
+            value: 1,
+            itemStyle: {
+                color: '#f6c28c'
+            }
+        }, {
+            name: '鹏城学者2.43',
+            value: 1,
+            itemStyle: {
+                color: '#f5bc81'
+            }
+        }, {
+            name: '荔园学者2.67',
+            value: 1,
+            itemStyle: {color: '#f4b676'}
+        }, {
+            name: '珠江学者2.80',
+            value: 1,
+            itemStyle: {color: '#f4b06b'}
+        }]
+    },{
+        name: '香港2.67',
+        value: 1,
+        itemStyle: {
+            color: '#e99f52'
+        },
+        children: [{
+            name: '香江学者2.67',
+            value: 1,
+            itemStyle: {
+                color: '#eea860'
+            }
+        }]
+    },{
+        name: '辽宁省2.71',
+        itemStyle: {
+            color: '#f69939'
+        },
+        children: [
+            {
+            name: '金普学者1.21',
+            value: 1,
+            itemStyle: {color: '#fcc58b'}
+        },
+        {
+            name: '腾飞学者1.61',
+            value: 1,
+            itemStyle: {
+                color: '#fdbf80'
+            }
+        }, {
+            name: '首山学者2.17',
+            value: 1,
+            itemStyle: {
+                color: '#fdba75'
+            }
+        }, {
+            name: '星海学者3.02',
+            value: 1,
+            itemStyle: {color: '#fbb56c'}
+        }, {
+            name: '辽河学者3.12',
+            value: 1,
+            itemStyle: {color: '#faaf62'}
+        }, {
+            name: '湛蓝学者3.28',
+            value: 1,
+            itemStyle: {color: '#f9aa58'}
+        }, {
+            name: '攀登学者3.37',
+            value: 1,
+            itemStyle: {color: '#f8a54f'}
+        }, {
+            name: '天柱山学者3.91',
+            value: 1,
+            itemStyle: {color: '#f79f45'}
+        }]
+    }, {
+        name: '广西省2.84',
+        itemStyle: {
+            color: '#e49440'
+        },
+        children: [{
+            name: '漓江学者1.81',
+            value: 1,
+            itemStyle: {
+                color: '#f4a858'
+            }
+        }, {
+            name: '八桂学者3.07',
+            value: 1,
+            itemStyle: {
+                color: '#efa04e'
+            }
+        }, {
+            name: '卓越学者3.66',
+            value: 1,
+            itemStyle: {
+                color: '#e99b48'
+            }
+        }]
+    },{
+        name: '浙江省2.94',
+        itemStyle: {
+            color: '#c67f35'
+        },
+        children: [
+            {
+            name: '钱江学者2.27',
+            value: 1,
+            itemStyle: {color: '#e5a35e'}
+        },
+        {
+            name: '瓯江学者2.37',
+            value: 1,
+            itemStyle: {
+                color: '#e09d58'
+            }
+        }, {
+            name: '求是特聘学者2.70',
+            value: 1,
+            itemStyle: {
+                color: '#dc9851'
+            }
+        }, {
+            name: '西湖学者3.02',
+            value: 1,
+            itemStyle: {color: '#d6914a'}
+        }, {
+            name: '甬江学者3.50',
+            value: 1,
+            itemStyle: {color: '#d08c45'}
+        }, {
+            name: '鉴湖学者3.76',
+            value: 1,
+            itemStyle: {color: '#ca843b'}
+        }]
+    },{
+        name: '上海市2.95',
+        itemStyle: {
+            color: '#af6a22'
+        },
+        children: [
+            {
+            name: '浦江学者2.16',
+            value: 1,
+            itemStyle: {color: '#d48b3e'}
+        },
+        {
+            name: '晨辉学者2.67',
+            value: 1,
+            itemStyle: {
+                color: '#cc853a'
+            }
+        }, {
+            name: '海洋学者2.87',
+            value: 1,
+            itemStyle: {
+                color: '#c67f36'
+            }
+        }, {
+            name: '东方学者3.10',
+            value: 1,
+            itemStyle: {color: '#c0792f'}
+        }, {
+            name: '沪江学者3.96',
+            value: 1,
+            itemStyle: {color: '#b87228'}
+        }]
+    }, {
+        name: '山东省3.57',
+        itemStyle: {
+            color: '#955512'
+        },
+        children: [{
+            name: '齐鲁学者3.17',
+            value: 1,
+            itemStyle: {
+                color: '#ab6720'
+            }
+        }, {
+            name: '鸢都学者3.24',
+            value: 1,
+            itemStyle: {
+                color: '#a2611c'
+            }
+        }, {
+            name: '泰山学者4.29',
+            value: 1,
+            itemStyle: {
+                color: '#9b5a16'
+            }
+        }]
+    },{
+        name: '福建省3.58',
+        itemStyle: {
+            color: '#81470b'
+        },
+        children: [
+            {
+            name: '桐江学者2.82',
+            value: 1,
+            itemStyle: {color: '#9b5e1e'}
+        },
+        {
+            name: '闽江学者3.02',
+            value: 1,
+            itemStyle: {
+                color: '#945819'
+            }
+        }, {
+            name: '旗山学者3.97',
+            value: 1,
+            itemStyle: {
+                color: '#8d5214'
+            }
+        }, {
+            name: '金山学者4.49',
+            value: 1,
+            itemStyle: {color: '#874d10'}
+        }]
+    }, {
+        name: '安徽省3.70',
+        itemStyle: {
+            color: '#643708'
+        },
+        children: [{
+            name: '皖江学者2.91',
+            value: 1,
+            itemStyle: {
+                color: '#6b3c0c'
+            }
+        }]
+    }]
+}, 
+{
+    name: '西部地区2.59',
+    itemStyle: {
+        color: '#f0f00b'
+    },
+    children: [{
+        name: '新疆2.11',
+        itemStyle: {
+            color: '#f1f142'
+        },
+        children: [{
+            name: '天山学者1.21',
+            value: 1,
+            itemStyle: {
+                color: '#f7f752'
+            }
+        }, {
+            name: '绿洲学者3.02',
+            value: 1,
+            itemStyle: {
+                color: '#f4f44b'
+            }
+        }]
+    }, {
+        name: '宁夏 2.17',
+        itemStyle: {
+            color: '#eeee33'
+        },
+        children: [{
+            name: '贺兰山学者2.17',
+            value: 1,
+            itemStyle: {
+                color: '#f1f13c'
+            }
+        }]
+    }, {
+        name: '四川省2.22',
+        itemStyle: {
+            color: '#e3e32d'
+        },
+        children: [{
+            name: '雏鹰学者1.71',
+            value: 1,
+            itemStyle: {
+                color: '#f5f548'
+            }
+        }, {
+            name: '西华学者2.07',
+            value: 1,
+            itemStyle: {
+                color: '#eded3a'
+            }
+        }, {
+            name: '杏林学者2.87',
+            value: 1,
+            itemStyle: {
+                color: '#e7e734'
+            }
+        }]
+    }, {
+        name: '西藏 2.36',
+        itemStyle: {
+            color: '#d7d72a'
+        },
+        children: [{
+            name: '珠峰学者2.36',
+            value: 1,
+            itemStyle: {
+                color: '#dcdc33'
+            }
+        }]
+    },{
+        name: '甘肃省2.48',
+        itemStyle: {
+            color: '#c8c827'
+        },
+        children: [{
+            name: '飞天学者2.27',
+            value: 1,
+            itemStyle: {
+                color: '#d6d63a'
+            }
+        }, {
+            name: '萃英学者2.70',
+            value: 1,
+            itemStyle: {
+                color: '#cdcd2f'
+            }
+        }]
+    },{
+        name: '陕西省2.68',
+        itemStyle: {
+            color: '#b7b728'
+        },
+        children: [
+            {
+            name: '翱翔学者1.71',
+            value: 1,
+            itemStyle: {color: '#d9d958'}
+        },
+        {
+            name: '雁塔学者1.87',
+            value: 1,
+            itemStyle: {
+                color: '#d8d853'
+            }
+        }, {
+            name: '胡杨学者2.62',
+            value: 1,
+            itemStyle: {
+                color: '#d4d44b'
+            }
+        }, {
+            name: '西外学者2.62',
+            value: 1,
+            itemStyle: {color: '#cfcf44'}
+        }, {
+            name: '曲江学者2.80',
+            value: 1,
+            itemStyle: {color: '#c9c93c'}
+        }, {
+            name: '长安学者2.87',
+            value: 1,
+            itemStyle: {color: '#c4c437'}
+        }, {
+            name: '华山学者3.17',
+            value: 1,
+            itemStyle: {color: '#bdbd30'}
+        }]
+    },{
+        name: '云南省2.75',
+        itemStyle: {
+            color: '#a3a321'
+        },
+        children: [{
+            name: '东陆学者1.21',
+            value: 1,
+            itemStyle: {
+                color: '#b2b22f'
+            }
+        }, {
+            name: '云岭学者4.29',
+            value: 1,
+            itemStyle: {
+                color: '#a9a928'
+            }
+        }]
+    }, {
+        name: '青海省2.90',
+        itemStyle: {
+            color: '#8f8f19'
+        },
+        children: [{
+            name: '昆仑学者2.90',
+            value: 1,
+            itemStyle: {
+                color: '#9a9a1f'
+            }
+        }]
+    }, {
+        name: '重庆市4.29',
+        itemStyle: {
+            color: '#7d7d11'
+        },
+        children: [{
+            name: '两江学者4.29',
+            value: 1,
+            itemStyle: {
+                color: '#868617'
+            }
+        }]
+    }]
+},
 
-				option = {
+{
+    name: '中部地区2.78',
+    itemStyle: {
+        color: '#fd0202'
+    },
+    children: [{
+        name: '内蒙古2.47',
+        itemStyle: {
+            color: '#f06161'
+        },
+        children: [{
+            name: '阴山学者2.47',
+            value: 1,
+            itemStyle: {
+                color: '#f98383'
+            }
+        }, {
+            name: '绿洲学者3.02',
+            value: 1,
+            itemStyle: {
+                color: '#f47474'
+            }
+        }]
+    }, {
+        name: '江西省2.53',
+        itemStyle: {
+            color: '#e34848'
+        },
+        children: [{
+            name: '瑶湖学者1.41',
+            value: 1,
+            itemStyle: {
+                color: '#f76868'
+            }
+        },{
+            name: '天佑学者2.56',
+            value: 1,
+            itemStyle: {
+                color: '#f36161'
+            }
+        }, {
+            name: '梅岭学者2.80',
+            value: 1,
+            itemStyle: {
+                color: '#ee5b5b'
+            }
+        }, {
+            name: '井冈学者3.37',
+            value: 1,
+            itemStyle: {
+                color: '#e85252'
+            }
+        }]
+    },{
+        name: '湖北省2.58',
+        itemStyle: {
+            color: '#d22d2d'
+        },
+        children: [
+            {
+            name: '桂子山学者1.21',
+            value: 1,
+            itemStyle: {color: '#f74f4f'}
+        },
+        {
+            name: '华中学者1.21',
+            value: 1,
+            itemStyle: {
+                color: '#f34747'
+            }
+        }, {
+            name: '珞珈学者2.11',
+            value: 1,
+            itemStyle: {
+                color: '#f33f3f'
+            }
+        }, {
+            name: '工大学者2.27',
+            value: 1,
+            itemStyle: {color: '#f03939'}
+        }, {
+            name: '文澜学者2.34',
+            value: 1,
+            itemStyle: {color: '#ec3c3c'}
+        }, {
+            name: '磁湖学者2.47',
+            value: 1,
+            itemStyle: {color: '#ea3535'}
+        }, {
+            name: '楚天学者2.82',
+            value: 1,
+            itemStyle: {color: '#e42e2e'}
+        }, {
+            name: '地大学者3.50',
+            value: 1,
+            itemStyle: {color: '#e02e2e'}
+        }, {
+            name: '阳光学者3.56',
+            value: 1,
+            itemStyle: {color: '#dd2c2c'}
+        }, {
+            name: '香涛学者4.29',
+            value: 1,
+            itemStyle: {color: '#d72c2c'}
+        }]
+    },{
+        name: '黑龙江省2.90',
+        itemStyle: {
+            color: '#b01e1e'
+        },
+        children: [{
+            name: '龙江学者2.90',
+            value: 1,
+            itemStyle: {
+                color: '#bf2626'
+            }
+        }]
+    }, {
+        name: '湖南省2.98',
+        itemStyle: {
+            color: '#9e0f0f'
+        },
+        children: [
+            {
+            name: '芙蓉学者2.17',
+            value: 1,
+            itemStyle: {color: '#d11f1f'}
+        },
+        {
+            name: '岳麓山学者2.67',
+            value: 1,
+            itemStyle: {
+                color: '#cb1f1f'
+            }
+        }, {
+            name: '潇湘学者2.70',
+            value: 1,
+            itemStyle: {
+                color: '#c51919'
+            }
+        }, {
+            name: '树人学者3.02',
+            value: 1,
+            itemStyle: {color: '#bf1818'}
+        }, {
+            name: '神农学者3.14',
+            value: 1,
+            itemStyle: {color: '#b71515'}
+        }, {
+            name: '湘江学者4.19',
+            value: 1,
+            itemStyle: {color: '#a91313'}
+        }]
+    },{
+        name: '河南省3.53',
+        itemStyle: {
+            color: '#830404'
+        },
+        children: [{
+            name: '中原学者2.16',
+            value: 1,
+            itemStyle: {
+                color: '#980c0c'
+            }
+        },{
+            name: '黄河学者3.40',
+            value: 1,
+            itemStyle: {
+                color: '#850909'
+            }
+        },{
+            name: '嵩山学者4.49',
+            value: 1,
+            itemStyle: {
+                color: '#750505'
+            }
+        }]
+    }]
+} 
+];
+			option = {
 					title: {
 						text: '各省评选条件指数',
 						subtext: 'Source: https://worldcoffeeresearch.org/work/sensory lexicon/',
