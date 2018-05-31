@@ -7,8 +7,9 @@
 		<!-- 引入 echarts.js -->
 		<!-- 这里是加载刚下好的echarts.min.js，注意路径 -->
 		<link rel="stylesheet" type="text/css" href="style/style.css" >
-		<script src="js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="js/bootstrap.min.css" />
+		<script src="bootstrap.min.js"></script>
+<link rel="stylesheet" href="bootstrap.min.css" />
+<link rel="stylesheet" href="bootstrap-responsive.min.css" />
 		<script src="echarts.js"></script>
 		<script src="js/customed.js"></script>
 		<script src="func.js"></script>
@@ -25,15 +26,16 @@
 			<p>近日，教育部公布了2017年度“长江学者奖励计划”正式名单，清华大学以23位教师 入选居于首位。各大高校也纷纷在各自官方通道公布本校入选名单，好一派峥嵘景象。“长江学者”素有“准院士”之称，入选为特聘教授不仅是对学者著作等身的肯定，更以优厚的待遇激励更多成果的输出。</p>
 			<br>
 			<p>然而，在高等教育投入不断增多的今天依然面临着“僧多粥少”的境况。根据《2016年中国统计年鉴》，高等学校研究与试验发展所投入的人员为85.2万。而“长江学者奖励计划”每年支持高校聘任150名特聘教授、50名讲座教授。激烈的竞争意味着大概率的淘汰比。但科研还需继续，除了长江学者计划外，各研究人员还有更合适的选择吗？</p>
-			<div id="schedule-provinces" class="chart" style="width:500px;height:400px;">
+			<div id="schedule-provinces1" class="chart" style="width:500px;height:400px">
 			</div>
 			<script type="text/javascript"></script>
 			<script src="scripts/china.js"></script>
 			<script>
-				var chartScheduleProvinces1 = echarts.init(document.getElementById('schedule-provinces'));
-optionScheduleProvinces1 = {
-    title: {
-	text:"各省级行政区“学者”数量分布",
+				var chartScheduleProvinces1 = echarts.init(document.getElementById('schedule-provinces1'));
+
+				optionScheduleProvinces1 = {
+					title: {
+		text:"各省级行政区“学者”数量分布",				
         x: "left"
     },
     tooltip: {
@@ -74,15 +76,34 @@ optionScheduleProvinces1 = {
         mapTypeControl: {
             china: true
         },
-        x: "right",
-        handlerColor: "rgb(144, 148, 150)"
+        x: "right"
     },
     series: [
         {
             type: "map",
             name: "省份",
-	    map:'china',
+            map:'china',
+            showLegendSymbol: true,
+            selectedMode: "multiple",
+            hoverable: true,
+            itemStyle: {
+                normal: {
+                    borderColor: "rgb(171, 173, 162)",
+                    label: {
+                        show: false
+                    }
+                }
+            },
+            mapType: "china",
             data: [
+                {
+								value: 3,
+								name: "北京"
+							},
+							{
+								value: 4,
+								name: "福建"
+							},
                 {
                     value: 6,
                     name: "江苏"
@@ -203,22 +224,11 @@ optionScheduleProvinces1 = {
                     value: 1,
                     name: "海南"
                 }
+            ]
+        }
     ],
-showLegendSymbol: true,
-						selectedMode: "multiple",
-						hoverable: true,
-						itemStyle: {
-							normal: {
-								borderColor: "rgb(171, 173, 162)",
-								label: {
-									show: false
-								}
-							}
-						},
-						mapType: "china"
-					}]
-				};
-    chartScheduleProvinces1.setOption(optionScheduleProvinces1);
+}
+				chartScheduleProvinces1.setOption(optionScheduleProvinces1);
 			</script>
 
 			<div>
@@ -948,7 +958,6 @@ showLegendSymbol: true,
 			option = {
 					title: {
 						text: '各省评选条件指数',
-						subtext: 'Source: https://worldcoffeeresearch.org/work/sensory lexicon/',
 						textStyle: {
 							fontSize: 14,
 							align: 'center'
@@ -956,7 +965,6 @@ showLegendSymbol: true,
 						subtextStyle: {
 							align: 'center'
 						},
-						sublink: 'https://worldcoffeeresearch.org/work/sensory lexicon/'
 					},
 					series: {
 						type: 'sunburst',
@@ -1355,7 +1363,7 @@ showLegendSymbol: true,
 			<div id="schedule-provinces" class="chart" style="width:500px;height:400px;">
 			</div>
 			<script type="text/javascript"></script>
-			<script src="scripts/china.js"></script>
+			<script src="assets/maps/china.js"></script>
 			<script>
 				var chartScheduleProvinces = echarts.init(document.getElementById('schedule-provinces'),'customed');
 
@@ -1373,6 +1381,7 @@ showLegendSymbol: true,
 						y: "bottom",
 						text: ["高", "低"],
 						calculable: true,
+						
 						precision: 2,
 						x: "left"
 					},
@@ -2024,169 +2033,122 @@ showLegendSymbol: true,
 		<!-- Swiper -->
 		<!--<div class="swiper-no-swiping"></div>-->
 
-		
-		<div class="container">
-			<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-7">
-					<td>&nbsp所属学科:</td>
-					<td>
-						<select onchange="select_sub_change(this.value)">
-							<option value="1">人文</option>
-							<option value="2" selected="selected">理工</option>
-						</select>
-					</td>
-				</div>
-				<div class="col-md-3"></div>
+		<div class="row">
+
+			<div class="col-md-6">
+				<td>&nbsp所属学科:</td>
+				<td>
+					<select onchange="select_sub_change(this.value)">
+						<option value="1">人文</option>
+						<option value="2" selected="selected">理工</option>
+					</select>
+				</td>
 			</div>
 
-			<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-7">
-					<td>&nbsp当前年龄:</td>
-					<td><input ime-mode:disabled onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="age"></td>
-					<!-- <td><input type="text" id="age"></td> -->
-				</div>
-				<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<td>&nbsp当前年龄:</td>
+				<td><input ime-mode:disabled onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="age"></td>
+				<!-- <td><input type="text" id="age"></td> -->
 			</div>
 
-			<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-7">
-					<td>&nbsp最高学历:</td>
-					<td>
-						<select onchange="select_edu_change(this.value)">
-							<option value="0" selected="selected"></option>
-							<option value="1">其他</option>
-							<option value="2">本科</option>
-							<option value="3">硕士</option>
-							<option value="4">博士及以上</option>
-						</select>
-					</td>
-				</div>
-				<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<td>&nbsp最高学历:</td>
+				<td>
+					<select onchange="select_edu_change(this.value)">
+						<option value="0" selected="selected"></option>
+						<option value="1">其他</option>
+						<option value="2">本科</option>
+						<option value="3">硕士</option>
+						<option value="4">博士及以上</option>
+					</select>
+				</td>
 			</div>
 
-			<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-7">
-					<td>&nbsp目前职称:</td>
-					<td>
-						<select onchange="select_job_change(this.value)">
-							<option value="0" selected="selected"></option>
-							<option value="1">其他</option>
-							<option value="2">国内副教授</option>
-							<option value="3">国外助理教授</option>
-							<option value="4">国内教授</option>
-							<option value="4">国外副教授及以上</option>
-						</select>
-					</td>
-				</div>
-				<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<td>&nbsp目前职称:</td>
+				<td>
+					<select onchange="select_job_change(this.value)">
+						<option value="0" selected="selected"></option>
+						<option value="1">其他</option>
+						<option value="2">国内副教授</option>
+						<option value="3">国外助理教授</option>
+						<option value="4">国内教授</option>
+						<option value="4">国外副教授及以上</option>
+					</select>
+				</td>
 			</div>
 
-			<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-7">
-					<td>&nbsp已获得奖项:</td>
-					<td>
-						<select onchange="select_awd_change(this.value)">
-							<option value="0" selected="selected"></option>
-							<option value="1">无</option>
-							<option value="2">省部级科技发明等奖项</option>
-							<option value="3">国家级科技发明等奖项</option>
-						</select>
-					</td>
-				</div>
-				<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<td>&nbsp已获得奖项:</td>
+				<td>
+					<select onchange="select_awd_change(this.value)">
+						<option value="0" selected="selected"></option>
+						<option value="1">无</option>
+						<option value="2">省部级科技发明等奖项</option>
+						<option value="3">国家级科技发明等奖项</option>
+					</select>
+				</td>
 			</div>
 
-			<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-7">
-					<td>&nbsp已参与科研:</td>
-					<td>
-						<select onchange="select_rhs_change(this.value)">
-							<option value="0" selected="selected"></option>
-							<option value="1">无</option>
-							<option value="2">参与或主持其他级别项目</option>
-							<option value="3">参与或主持省部级项目</option>
-							<option value="4">参与或主持国家级项目</option>
-							<option value="5">参与或主持国家重大专项</option>
-						</select>
-					</td>
-				</div>
-				<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<td>&nbsp已参与科研:</td>
+				<td>
+					<select onchange="select_rhs_change(this.value)">
+						<option value="0" selected="selected"></option>
+						<option value="1">无</option>
+						<option value="2">参与或主持其他级别项目</option>
+						<option value="3">参与或主持省部级项目</option>
+						<option value="4">参与或主持国家级项目</option>
+						<option value="5">参与或主持国家重大专项</option>
+					</select>
+				</td>
 			</div>
 
-			<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-7">
-					<td>&nbsp倾向地域:</td>
-					<td>
-						<tr><input type="checkbox" name="check" value="3" />东部</tr>
-						<tr><input type="checkbox" name="check" value="2" />西部</tr>
-						<tr><input type="checkbox" name="check" value="1" />中部</tr>
-					</td>
-				</div>
-				<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<td>&nbsp倾向地域:</td>
+				<td>
+					<tr><input type="checkbox" name="check" value="3" />东部</tr>
+					<tr><input type="checkbox" name="check" value="2" />西部</tr>
+					<tr><input type="checkbox" name="check" value="1" />中部</tr>
+				</td>
 			</div>
 
-			<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-7">
-					<td>&nbsp住房补助:</td>
-					<td>
-						<select onchange="select_hss_change(this.value)">
-							<option value="0" selected="selected">否</option>
-							<option value="1">是</option>
-						</select>
-					</td>
-				</div>
-				<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<td>&nbsp住房补助:</td>
+				<td>
+					<select onchange="select_hss_change(this.value)">
+						<option value="0" selected="selected">否</option>
+						<option value="1">是</option>
+					</select>
+				</td>
 			</div>
 
-			<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-7">
-					<td>&nbsp家属优惠政策:</td>
-					<td>
-						<select onchange="select_fmp_change(this.value)">
-							<option value="0" selected="selected">否</option>
-							<option value="1">是</option>
-						</select>
-					</td>
-				</div>
-				<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<td>&nbsp家属优惠政策:</td>
+				<td>
+					<select onchange="select_fmp_change(this.value)">
+						<option value="0" selected="selected">否</option>
+						<option value="1">是</option>
+					</select>
+				</td>
 			</div>
 
-			<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-7">
-					<td>&nbsp预期科研补助（万/年）:</td>
-					<td><input ime-mode:disabled onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="rsg"></td>
-				</div>
-				<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<td>&nbsp预期科研补助（万/年）:</td>
+				<td><input ime-mode:disabled onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="rsg"></td>
 			</div>
 
-			<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-7">
-					<td>&nbsp预期津贴（万/年）:</td>
-					<td><input ime-mode:disabled onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="epa"></td>
-				</div>
-				<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<td>&nbsp预期津贴（万/年）:</td>
+				<td><input ime-mode:disabled onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="epa"></td>
+
 			</div>
 
-			<div class="row">
-				<div class="col-md-3"></div>
-				<td><input type="button" value="搜索" onclick="sqlsearch()"></td>
-				<table border="1" id="datatable"></table>
-				<p id="msg"></p>
-			</div>
+			<td><input type="button" value="搜索" onclick="sqlsearch()"></td>
+			<table border="1" id="datatable"></table>
+			<p id="msg"></p>
 
 		</div>
-
 </article>
 
 	</body>
