@@ -31,183 +31,197 @@
 			<script src="assets/maps/china.js"></script>
 			<script>
 				var chartScheduleProvinces = echarts.init(document.getElementById('schedule-provinces'),'customed');
-
-				optionScheduleProvinces = {
-					title: {
-						text:"各省“学者”计划待遇指数分布",
-						x: "left"
-					},
-					tooltip: {
-						trigger: "item"
-					},
-					dataRange: {
-						min: 0.93,
-						max: 3.09,
-						y: "bottom",
-						text: ["高", "低"],
-						calculable: true,
-						
-						precision: 2,
-						x: "left"
-					},
-					toolbox: {
-						show: false,
-						orient: "vertical",
-						x: "right",
-						y: "bottom",
-						feature: {
-							dataView: {
-								readOnly: false,
-								show: true
-							},
-							mark: {
-								show: true
-							},
-							magicType: {
-								show: false
-							},
-							restore: {
-								show: true
-							},
-							saveAsImage: {
-								show: true
-							}
-						}
-					},
-					roamController: {
-						show: false,
-						x: "right",
-						mapTypeControl: {
-							china: true
-						},
-						handlerColor: "rgb(97, 185, 226)",
-						fillerColor: "#fff",
-						borderWidth: 0
-					},
-					series: [{
-						type: "map",
-						map: 'china',
-						name: "待遇指数",
-						data: [{
-								value: 2.45,
-								name: "安徽"
-							},
-							{
-								value: 1.29,
-								name: "北京"
-							},
-							{
-								value: 1.72,
-								name: "福建"
-							},
-							{
-								value: 0.93,
-								name: "甘肃"
-							},
-							{
-								value: 1.58,
-								name: "广东"
-							},
-							{
-								value: 2.14,
-								name: "广西"
-							},
-							{
-								value: 1.17,
-								name: "河北"
-							},
-							{
-								value: 1.8,
-								name: "河南"
-							},
-							{
-								value: 1.95,
-								name: "黑龙江"
-							},
-							{
-								value: 1.61,
-								name: "湖北"
-							},
-							{
-								value: 2.45,
-								name: "湖南"
-							},
-							{
-								value: 1.78,
-								name: "江苏"
-							},
-							{
-								value: 1.69,
-								name: "江西"
-							},
-							{
-								value: 1.77,
-								name: "辽宁"
-							},
-							{
-								value: 1.18,
-								name: "内蒙古"
-							},
-							{
-								value: 1.5,
-								name: "宁夏"
-							},
-							{
-								value: 1.33,
-								name: "青海"
-							},
-							{
-								value: 1.75,
-								name: "山东"
-							},
-							{
-								value: 1.83,
-								name: "山西"
-							},
-							{
-								value: 1.82,
-								name: "陕西"
-							},
-							{
-								value: 1.31,
-								name: "上海"
-							},
-							{
-								value: 1.1,
-								name: "四川"
-							},
-							{
-								value: 1.31,
-								name: "天津"
-							},
-							{
-								value: 1.17,
-								name: "西藏"
-							},
-							{
-								value: 1.83,
-								name: "香港"
-							},
-							{
-								value: 1.61,
-								name: "新疆"
-							},
-							{
-								value: 1.46,
-								name: "云南"
-							},
-							{
-								value: 1.75,
-								name: "浙江"
-							},
-							{
-								value: 3.09,
-								name: "重庆"
-							}
-						]
-					}],
-				};
-				chartScheduleProvinces.setOption(optionScheduleProvinces);
+optionScheduleProvinces = {
+    title: {"各省级行政区“学者”数量分布"
+        x: "center",
+        textStyle: {
+            color: "rgb(234, 117, 148)"
+        }
+    },
+    tooltip: {
+        trigger: "item",
+        borderWidth: 0,
+        borderColor: "rgb(242, 242, 242)"
+    },
+    dataRange: {
+        min: 0,
+        max: 12,
+        x: "left",
+        y: "bottom",
+        text: ["高", "低"],
+        calculable: true,
+    },
+    toolbox: {
+        feature: {
+            mark: {
+                show: true
+            },
+            dataView: {
+                show: true,
+                readOnly: false
+            },
+            restore: {
+                show: true
+            },
+            saveAsImage: {
+                show: true
+            }
+        },
+        show: true,
+        orient: "vertical",
+        y: "bottom",
+        x: "right"
+    },
+    roamController: {
+        mapTypeControl: {
+            china: true
+        },
+        x: "right",
+        handlerColor: "rgb(144, 148, 150)"
+    },
+    series: [
+        {
+            type: "map",
+            name: "省份",
+		map:"china",
+            showLegendSymbol: true,
+            selectedMode: "multiple",
+            hoverable: true,
+            itemStyle: {
+                normal: {
+                    borderColor: "rgb(171, 173, 162)",
+                    label: {
+                        show: false
+                    }
+                }
+            },
+            mapType: "china",
+            data: [
+                {
+                    value: 6,
+                    name: "江苏"
+                },
+                {
+                    value: 7,
+                    name: "广东"
+                },
+                {
+                    value: 8,
+                    name: "辽宁"
+                },
+                {
+                    value: 2,
+                    name: "河北"
+                },
+                {
+                    value: 7,
+                    name: "上海"
+                },
+                {
+                    value: 3,
+                    name: "天津"
+                },
+                {
+                    value: 4,
+                    name: "山东"
+                },
+                {
+                    value: 6,
+                    name: "浙江"
+                },
+                {
+                    value: 2,
+                    name: "安徽"
+                },
+                {
+                    value: 4,
+                    name: "河南"
+                },
+                {
+                    value: 1,
+                    name: "黑龙江"
+                },
+                {
+                    value: 12,
+                    name: "湖北"
+                },
+                {
+                    value: 6,
+                    name: "湖南"
+                },
+                {
+                    value: 1,
+                    name: "内蒙古"
+                },
+                {
+                    value: 6,
+                    name: "江西"
+                },
+                {
+                    value: 1,
+                    name: "山西"
+                },
+                {
+                    value: 2,
+                    name: "甘肃"
+                },
+                {
+                    value: 3,
+                    name: "广西"
+                },
+                {
+                    value: 1,
+                    name: "青海"
+                },
+                {
+                    value: 1,
+                    name: "宁夏"
+                },
+                {
+                    value: 8,
+                    name: "陕西"
+                },
+                {
+                    value: 4,
+                    name: "四川"
+                },
+                {
+                    value: 1,
+                    name: "西藏"
+                },
+                {
+                    value: 2,
+                    name: "新疆"
+                },
+                {
+                    value: 2,
+                    name: "云南"
+                },
+                {
+                    value: 1,
+                    name: "重庆"
+                },
+                {
+                    value: 1,
+                    name: "香港"
+                },
+                {
+                    value: 1,
+                    name: "吉林"
+                },
+                {
+                    value: 1,
+                    name: "贵州"
+                },
+                {
+                    value: 1,
+                    name: "海南"
+                }
+            ]
+        }
+    ],
+}
+    chartScheduleProvinces.setOption(optionScheduleProvinces);
 			</script>
 
 			<div>
