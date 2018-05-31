@@ -33,7 +33,6 @@
 				var chartScheduleProvinces1 = echarts.init(document.getElementById('schedule-provinces1'));
 
 				optionScheduleProvinces1 = {
-					{
     title: {"各省级行政区“学者”数量分布"
         x: "center",
         textStyle: {
@@ -51,7 +50,7 @@
         x: "left",
         y: "bottom",
         text: ["高", "低"],
-        calculable: true
+        calculable: true,
     },
     toolbox: {
         feature: {
@@ -217,8 +216,11 @@
                 {
                     value: 1,
                     name: "海南"
-                }
-            ],
+                           }
+            ]
+        }
+    ],
+}
 						showLegendSymbol: true,
 						selectedMode: "multiple",
 						hoverable: true,
