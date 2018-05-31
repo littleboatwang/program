@@ -35,7 +35,7 @@ function removeAllData() {
 	var tr = document.createElement("tr");
 	var th = document.createElement("th");
 
-	th.innerHTML = "学者计划名";
+	th.innerHTML = "学者计划";
 
 	tr.appendChild(th);
 
