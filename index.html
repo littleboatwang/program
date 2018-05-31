@@ -28,16 +28,13 @@
 			<div id="schedule-provinces" class="chart" style="width:500px;height:400px;">
 			</div>
 			<script type="text/javascript"></script>
-			<script src="assets/maps/china.js"></script>
+			<script src="scripts/china.js"></script>
 			<script>
 				var chartScheduleProvinces = echarts.init(document.getElementById('schedule-provinces'));
 optionScheduleProvinces = {
     title: {
 	text:'各省级行政区“学者”数量分布',
-        x: "left",
-        textStyle: {
-            color: "rgb(234, 117, 148)"
-        }
+        x: "left"
     },
     tooltip: {
         trigger: "item",
@@ -50,7 +47,7 @@ optionScheduleProvinces = {
         x: "left",
         y: "bottom",
         text: ["高", "低"],
-        calculable: true,
+        calculable: true
     },
     toolbox: {
         feature: {
@@ -1359,7 +1356,7 @@ optionScheduleProvinces = {
 			<div id="schedule-provinces" class="chart" style="width:500px;height:400px;">
 			</div>
 			<script type="text/javascript"></script>
-			<script src="assets/maps/china.js"></script>
+			<script src="scripts/china.js"></script>
 			<script>
 				var chartScheduleProvinces1 = echarts.init(document.getElementById('schedule-provinces'),'customed');
 
